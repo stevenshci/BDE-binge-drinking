@@ -26,3 +26,7 @@ For the analysis of the data, the code can be understood as three parts
 1. Data loading
 2. Using optuna to get the best model parameters
 3. Data analysis
+
+### Data loading
+### Using optuna to get the best model parameters
+### Data analysis
