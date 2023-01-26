@@ -20,3 +20,9 @@ conda create -n globem python=3.9
 conda activate globem
 pip install -r requirements.txt
 ```
+
+## Code Breakdown
+For the analysis of the data, the code can be understood as three parts
+1. Data loading
+2. Using optuna to get the best model parameters
+3. Data analysis
