@@ -44,6 +44,7 @@ Since each class has a different amount of data, we use smote to average the dat
 sub_x_train_general, sub_y_train_general = sm.fit_resample(sub_x_train_general, sub_y_train_general)
 ```
 The parameters of the model are tuned using optuna, and the cross-validation process is repeated with different models to derive good model parameters.
+
 optunan website: https://optuna.org/
 ### Data analysis
 Using the best model parameters obtained in the second step, a new model is generated, which is used to learn the training set and subsequently validated using the test set to obtain the final results
