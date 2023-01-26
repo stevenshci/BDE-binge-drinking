@@ -48,3 +48,6 @@ The parameters of the model are tuned using optuna, and the cross-validation pro
 optunan website: https://optuna.org/
 ### Data analysis
 Using the best model parameters obtained in the second step, a new model is generated, which is used to learn the training set and subsequently validated using the test set to obtain the final results
+```
+model = XGBClassifier(**params)
+```
