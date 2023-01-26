@@ -13,7 +13,7 @@ The Code folder holds our program code and the dataset file holds the datasets w
 
 ### Environment
 
-GLOBEm is a python-based platform to leverage its flexibility and large number of open libraries. Here is an example of using Anaconda or miniconda for environment setup:
+Here is an example of using anaconda or miniconda for environment setup:
 
 ```
 conda create -n globem python=3.9
