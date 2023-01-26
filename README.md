@@ -33,6 +33,17 @@ Depending on the name of the file, the required dataset is called. In the sample
 X_train_general, X_test_general, y_train_general, y_test_general= train_test_split(x_general_1, y_general,test_size=0.2)
 ```
 ### Using optuna to get the best model parameters
-The training data set is divided into ten parts using cross-validation, and ten calculations are performed to find the average of the accuracies. The parameters of the model are tuned using optuna, and the cross-validation process is repeated with different models to derive good model parameters.
+The training data set is divided into ten parts using cross-validation, and ten calculations are performed to find the average of the accuracies. 
+```
+for train_index, test_index in kfold.split(x_general_gk):
+  sub_x_train_general, sub_x_test_general = x_general_gk[train_index], x_general_gk[test_index]
+  sub_y_train_general, sub_y_test_general = y_general_gk[train_index], y_general_gk[test_index]
+```
+Since each class has a different amount of data, we use smote to average the data
+```
+sub_x_train_general, sub_y_train_general = sm.fit_resample(sub_x_train_general, sub_y_train_general)
+```
+The parameters of the model are tuned using optuna, and the cross-validation process is repeated with different models to derive good model parameters.
+optunan website: https://optuna.org/
 ### Data analysis
 Using the best model parameters obtained in the second step, a new model is generated, which is used to learn the training set and subsequently validated using the test set to obtain the final results
