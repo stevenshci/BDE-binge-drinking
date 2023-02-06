@@ -53,8 +53,8 @@ model = XGBClassifier(**params)
 ```
 
 ### XAI ANALYSIS
-##SETUP 
-#Partial Dependence Plot- pdpbox package Installation
+## SETUP 
+# Partial Dependence Plot- pdpbox package Installation
 
 through pip 
 ```
