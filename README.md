@@ -52,9 +52,9 @@ Using the best model parameters obtained in the second step, a new model is gene
 model = XGBClassifier(**params)
 ```
 
-### XAI ANALYSIS
+# XAI ANALYSIS
 ## SETUP 
-# Partial Dependence Plot- pdpbox package Installation
+### Partial Dependence Plot- pdpbox package Installation
 
 through pip 
 ```
