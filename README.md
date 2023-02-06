@@ -51,3 +51,6 @@ Using the best model parameters obtained in the second step, a new model is gene
 ```
 model = XGBClassifier(**params)
 ```
+
+## XAI ANALYSIS
+#SETUP 
