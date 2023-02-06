@@ -66,5 +66,11 @@ $ git clone https://github.com/SauceCat/PDPbox.git
 $ cd PDPbox
 $ python setup.py install
 ```
+set versions:
+```
+xgboost==1.3.3
+matplotlib==3.1.1
+sklearn==0.23.1
+```
 For details see:
 https://github.com/SauceCat/PDPbox
