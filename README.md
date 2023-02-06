@@ -74,3 +74,12 @@ sklearn==0.23.1
 ```
 For details see:
 https://github.com/SauceCat/PDPbox
+
+### SHAP package installation
+
+```
+pip install shap
+or
+conda install -c conda-forge shap
+```
+
