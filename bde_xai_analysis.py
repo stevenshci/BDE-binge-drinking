@@ -21,7 +21,7 @@ df_omit = df_omit[df_omit['day_of_week'] <5]
 
 df_omit=df_omit.drop(columns='day_of_week')
 df_omit["label"] = pd.factorize(df_omit["label"])[0].astype(int)
-df_omit=df_omit.drop(columns=['pid','study_duration','Unnamed: 0','time_stamp'])
+df_omit=df_omit.drop(columns=['pid','study_duration','time_stamp'])
 
 X = df_omit.drop(columns=['label'])
 y = df_omit.label

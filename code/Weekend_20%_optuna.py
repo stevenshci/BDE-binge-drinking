@@ -173,7 +173,6 @@ def main():
     df_omit["label"] = pd.factorize(df_omit["label"])[0].astype(int)
     df_omit=df_omit.drop(columns='pid')
     df_omit=df_omit.drop(columns='study_duration')
-    df_omit=df_omit.drop(columns='Unnamed: 0')
     df_omit=df_omit.drop(columns='time_stamp') 
     y_general = df_omit['label'] 
     x_general_1 = df_omit.drop(columns='label')
