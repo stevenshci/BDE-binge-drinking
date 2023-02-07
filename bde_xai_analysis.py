@@ -26,7 +26,7 @@ df_omit=df_omit.drop(columns=['pid','study_duration','time_stamp'])
 X = df_omit.drop(columns=['label'])
 y = df_omit.label
 
-#import the best model parameter for the dataset
+#import the model parameter for the dataset
 row = 2; col = 16 
 with open("15_result_indexed_dataset_window3_distance1_weekday_result.csv") as f:
     reader = csv.reader(f)
