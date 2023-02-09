@@ -6,6 +6,7 @@ import math
 import warnings
 warnings.filterwarnings("ignore")
 
+#Query the dataset to get the device number corresponding to the Participant Number
 df = pd.read_excel('6-20-22 match 75 location demo 3class 11-27-21.xlsx')
 list_pid_temp = df['AWAREID'].values.tolist()
 list_pid=[]
@@ -48,7 +49,7 @@ df_deviceid = pd.read_csv(str_name)
 
 device_id_now = device_idsr[0]
 
-
+#Since the participant number may correspond to more than one device, up to three, we cycle through them three times in order to check if we are missing something
 for bigi in range (3):
     l=len(list_pid_co)
 
