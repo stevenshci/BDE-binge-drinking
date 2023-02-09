@@ -6,8 +6,9 @@ import math
 import warnings
 warnings.filterwarnings("ignore")
 
-#Query the dataset to get the device number corresponding to the Participant Number
-df = pd.read_excel('6-20-22 match 75 location demo 3class 11-27-21.xlsx')
+# Query the dataset to get the device number corresponding to the Participant Number
+# For this part we input the dataset about participant id and device id,to know device id of Participant 
+df = pd.read_excel('Comparison table of pid and device id.xlsx')
 list_pid_temp = df['AWAREID'].values.tolist()
 list_pid=[]
 for i in range(len(list_pid_temp)):
