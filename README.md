@@ -2,7 +2,7 @@
 
 # Introduction
 
-The Code folder holds our program code and the dataset file holds the datasets we used for the analysis with different windows and different distances. When running the program, to prevent path configuration problems, we recommend placing the dataset and the code in the same folder. To ensure the privacy of the participants, we have hidden some of the location data, so the results obtained using this dataset may be different from the results in the paper. Using our publicly available dataset, the best result of weekend and weekday is windows 12, distance 6.
+The Code folder holds our program code and the dataset file holds the datasets we used for the analysis with different windows and different distances. When running the program, to prevent path configuration problems, we recommend placing the dataset and the code in the same folder. To ensure the privacy of the participants, we have hidden some of the location data, so the results obtained using this dataset may be different from the results in the paper. Using our publicly available dataset, the best result of weekend is windows 12, distance 6 and for the weekday, the best model is winodws 9 distance 6.
 
 # Dataset
 We use behavioral features from sensor data over a given analysis window of w hours, we predict whether the subject will have a binge drinking event within d hours . To build this predictive model, we first created a dataset containing the sensor data for each person on each day of the study, calculating features in 15-minute windows. 
