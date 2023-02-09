@@ -16,7 +16,7 @@ We use behavioral features from sensor data over a given analysis window of w ho
 Here is an example of using anaconda or miniconda for environment setup:
 
 ```
-conda create -n globem python=3.9
+conda create -n globem python=3.8
 conda activate globem
 pip install -r requirements.txt
 ```
