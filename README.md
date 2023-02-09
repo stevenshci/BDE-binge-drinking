@@ -6,6 +6,7 @@ The Code folder holds our program code and the dataset file holds the datasets w
 
 # Dataset
 We use behavioral features from sensor data over a given analysis window of w hours, we predict whether the subject will have a binge drinking event within d hours . To build this predictive model, we first created a dataset containing the sensor data for each person on each day of the study, calculating features in 15-minute windows. For our dataset folder, we created 15 datasets by combining different Windows and distances. You can find out the corresponding windows and diatances according to the name of the dataset, such as the '15_result_indexed_dataset_window1_distance1.csv' file, window1 means its Windows is 1 and distance1 means its distance is 1.
+![image](https://github.com/lexsaints/powershell/blob/master/IMG/ps2.png)
 
 # Tutorial
 
