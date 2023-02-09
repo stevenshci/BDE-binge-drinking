@@ -54,7 +54,7 @@ Using the best model parameters obtained in the second step, a new model is gene
 model = XGBClassifier(**params)
 ```
 
-### XAI ANALYSIS
-
+### XAI analysis
+When we get the model, we use XAI to analysis it.
 ```
 For details see: https://github.com/slundberg/shap
