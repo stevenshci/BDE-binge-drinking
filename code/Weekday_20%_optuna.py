@@ -15,6 +15,10 @@ from sklearn.preprocessing import MinMaxScaler
 from xgboost import XGBClassifier
 from sklearn.model_selection import KFold
 from sklearn.metrics import f1_score
+import shap
+import matplotlib.pyplot as plt
+from pdpbox.pdp import pdp_isolate, pdp_interact, pdp_interact_plot, pdp_plot
+from pdpbox import pdp, get_dataset, info_plots
 
 # function of optuna
 def objective(trial):
@@ -82,7 +86,9 @@ def objective(trial):
 def xgboostML(params,lines,X_train_general, X_test_general, y_train_general, y_test_general):    
     model = XGBClassifier(**params)
     sm = SMOTE(random_state = 3,sampling_strategy='not majority')
-    X_train_general, y_train_general = sm.fit_resample(X_train_general, y_train_general)    
+    X_train_general, y_train_general = sm.fit_resample(X_train_general, y_train_general)
+    features= X_test_general.columns
+    X_train_general.columns=features    
     model.fit(X_train_general,y_train_general)
 
 
@@ -141,6 +147,44 @@ def xgboostML(params,lines,X_train_general, X_test_general, y_train_general, y_t
 
     list_res_temp.append(lines)
     list_res_temp.append(params)
+
+    """
+    You can select a smaller subset of X_test_general to analyze for quick results. 
+    """
+    explainer = shap.KernelExplainer(model.predict_proba, X_test_general)
+    shap_values = explainer.shap_values(X_test_general)
+
+    #Beeswarm Summary Plot
+    print(shap.summary_plot(shap_values[2], X_test_general, max_display=20))
+    #Feature Importance Bar Plot
+    print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
+
+    #SHAP Dependence Plot 
+    print(shap_figure=shap.dependence_plot('radius_of_gyration', shap_values[2], X_test_general, interaction_index='time_of_day'))
+
+    #Partial Dependence Plot (Radius of Gyration)
+    pdp_dist = pdp.pdp_isolate(model=model, dataset=X_test_general, model_features=X_test_general.columns, feature='radius_of_gyration', num_grid_points=11)
+    pdp.pdp_plot(pdp_dist, 'radius_of_gyration', x_quantile= True, ncols=3, figsize=(27,8), plot_params={'title': 'PDP of radius of gyration for WEEKDAYS',
+                    'subtitle': "3W1D",
+                    'title_fontsize': 15,
+                    'subtitle_fontsize': 12})
+    print(plt.show())
+
+    #Two Way Partial Dependence Plot (Latitude-Longitude)
+    pdp_combo = pdp.pdp_interact(
+        model=model, dataset=X_test_general, model_features=X_test_general.columns, features=['avg_longitude', 'avg_latitude'], 
+        num_grid_points=[10, 10],  percentile_ranges=[(6,91), (4,93)], n_jobs=1
+    )
+
+    fig, axes = pdp.pdp_interact_plot(
+        pdp_combo, ['avg_longitude','avg_latitude'], plot_type='contour', x_quantile=True, ncols=2, 
+        plot_pdp=True, which_classes=[2], figsize= (12,12), plot_params={'title': 'PDP interaction of Location Coordinates for WEEKDAYS', 'subtitle': '3W1D',
+                'title_fontsize': 15}
+                )
+
+    print(plt.show())
+
+
 
     df_res.loc[0]=list_res_temp
     df_res.to_csv('%s_weekday_result.csv'%str_name[0])
