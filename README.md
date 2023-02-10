@@ -10,7 +10,8 @@ We use behavioral features from sensor data over a given analysis window of w ho
 ![image](https://github.com/stevenshci/BDE-binge-drinking/blob/main/IMG/img_01.png)
 
 ## Pre-processing
-For the preparation of the database, most of the FEATURES we refer to the paper [name](). And for the location part of the dataset, please refer to our file [ Latitude and longitude extraction.py](https://github.com/stevenshci/BDE-binge-drinking/blob/main/code/Latitude%20and%20longitude%20extraction.py)
+For the preparation of the database, most of the FEATURES we refer to the paper [Extraction of Behavioral Features from Smartphone and Wearable Data](
+https://doi.org/10.48550/arXiv.1812.10394). And for the location part of the dataset, please refer to our file [ Latitude and longitude extraction.py](https://github.com/stevenshci/BDE-binge-drinking/blob/main/code/Latitude%20and%20longitude%20extraction.py)
 
 # Tutorial
 
