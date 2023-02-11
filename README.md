@@ -68,5 +68,5 @@ model = XGBClassifier(**params)
 
 ### XAI analysis
 When we get the model, we use XAI to analysis it. ForXAI analusis, we use two packages: pdpbox and shap.
-```
-For details see: https://github.com/slundberg/shap
+
+For details see: https://github.com/slundberg/shap and https://github.com/SauceCat/PDPbox
