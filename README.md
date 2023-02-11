@@ -38,8 +38,8 @@ https://doi.org/10.48550/arXiv.1812.10394). Additionaly we extarct [Latitude and
 Here is an example of using anaconda or miniconda for environment setup:
 
 ```
-conda create -n bingedrinking python=3.8
-conda activate bingedrinking
+conda create -n bde python=3.8
+conda activate bde
 pip install -r requirements.txt
 ```
 
