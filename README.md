@@ -1,19 +1,25 @@
-# BDE-binge-drinking
+# Leveraging Mobile Phone Sensors, Machine Learning and Explainable Artificial Intelligence to Predict Imminent Same-Day Binge Drinking Events to Support Just-In-Time Adaptive Interventions: A Feasibility Study
 
 # Introduction
 
-The Code folder holds our program code and the dataset file holds the datasets we used for the analysis with different windows and different distances. When running the program, to prevent path configuration problems, we recommend placing the dataset and the code in the same folder. To ensure the privacy of the participants, we have hidden some of the location data, We keep all latitude and longitude data to one decimal place, so the results obtained using this dataset may be different from the results in the paper. Using our publicly available dataset, the best result of weekend is windows 12, distance 6 and for the weekday, the best model is winodws 9 distance 6.
+This repository host the codebase and dataset used in the analysis of our work [Leveraging Mobile Phone Sensors, Machine Learning and Explainable Artificial Intelligence to Predict Imminent Same-Day Binge Drinking Events to Support Just-In-Time Adaptive Interventions: A Feasibility Study](https://example.com) with different windows and different distances from the drinking event. We evaluated the feasibility of using machine learning models to predict same-day BDEs (versus low-risk drinking events and non-drinking periods) using smartphone sensor data (e.g., accelerometer, GPS). Different algorithms (e.g., XGBoost, decision tree) were tested to assess the prediction accuracy across various “prediction distance” time windows (1-6 hours from drinking onset). Using a publicly available dataset, the best model was found to be a XGBoost model for both the weekend and weekday, with a prediction distance of 6 hours. Explainable AI (XAI) was used to explore interactions between the most informative phone sensor features contributing to BDEs.
 
 # Dataset
-We use behavioral features from sensor data over a given analysis window of w hours, we predict whether the subject will have a binge drinking event within d hours . To build this predictive model, we first created a dataset containing the sensor data for each person on each day of the study, calculating features in 15-minute windows. For our dataset folder, we created 15 datasets by combining different Windows and distances. You can find out the corresponding windows and diatances according to the name of the dataset, such as the '15_result_indexed_dataset_window1_distance1.csv' file, window1 means its Windows is 1 and distance1 means its distance is 1.
+Our strategy for drinking prediction modeling is as follows: using behavioral features from sensor data over a given analysis window of _w_ hours (where we varied _w_), we predicted whether the subject will have a binge drinking event within _d_ hours (with varying _d_ to optimize the model). We use behavioral features from sensor data over a given analysis window of _w_ hours, we predict whether the subject will have a binge drinking event within _d_ hours . To build this predictive model, we first created a dataset containing the sensor data for each person on each day of the study, calculating features in 15-minute windows. In the dataset folder, we have created 15 datasets by combining different windows and distances. The corresponding windows and diatances according to the name of the [dataset folder](/dataset/), such as the '15_result_indexed_dataset_window1_distance1.csv' file, window1 means its window is 1 and distance1 means its distance is 1. In total we have phone sensor data from 75 young adults.
 
-![image](https://github.com/stevenshci/BDE-binge-drinking/blob/main/figs/img_01.png)
+![image](/figs/datasetCreation.png)
 
-## Pre-processing
-For the preparation of the database, most of the FEATURES we refer to the paper [Extraction of Behavioral Features from Smartphone and Wearable Data](
-https://doi.org/10.48550/arXiv.1812.10394). And for the location part of the dataset, please refer to our file [ Latitude and longitude extraction.py](https://github.com/stevenshci/BDE-binge-drinking/blob/main/code/Latitude%20and%20longitude%20extraction.py)
+<!-- # Preprocessing, Modeling and Explanation -->
 
-# Tutorial
+## Feature Extraction
+We followed robust feature exctraction method decribed in [Extraction of Behavioral Features from Smartphone and Wearable Data](
+https://doi.org/10.48550/arXiv.1812.10394). Additionaly we extarct [Latitude and Longitude](/code/Latitude%20and%20longitude%20extraction.py).
+
+<!-- ## Machine Learning
+
+## Model Explainbility
+
+# Tutorial -->
 
 ## Setup
 
@@ -22,8 +28,8 @@ https://doi.org/10.48550/arXiv.1812.10394). And for the location part of the dat
 Here is an example of using anaconda or miniconda for environment setup:
 
 ```
-conda create -n globem python=3.8
-conda activate globem
+conda create -n bingedrinking python=3.8
+conda activate bingedrinking
 pip install -r requirements.txt
 ```
 
