@@ -4,6 +4,14 @@
 
 This repository host the codebase and dataset used in the analysis of our work [Leveraging Mobile Phone Sensors, Machine Learning and Explainable Artificial Intelligence to Predict Imminent Same-Day Binge Drinking Events to Support Just-In-Time Adaptive Interventions: A Feasibility Study](https://example.com) with different windows and different distances from the drinking event. We evaluated the feasibility of using machine learning models to predict same-day BDEs (versus low-risk drinking events and non-drinking periods) using smartphone sensor data (e.g., accelerometer, GPS). Different algorithms (e.g., XGBoost, decision tree) were tested to assess the prediction accuracy across various “prediction distance” time windows (1-6 hours from drinking onset). Using a publicly available dataset, the best model was found to be a XGBoost model for both the weekend and weekday, with a prediction distance of 6 hours. Explainable AI (XAI) was used to explore interactions between the most informative phone sensor features contributing to BDEs.
 
+## Highlights
+SHAP Interaction between time of day and radius of gyration and average latitude features, respectively on weekdays (left) and on weekends (right) affecting the BDE prediction, using the test data set 
+![image](/figs/rog_shap.png)
+
+
+PDP Contour plot of the interaction between a 15-minute average latitude and longitude predicting BDEs on weekdays (left) and weekends (right) using the test data set
+![image](/figs/contour_pdp.png)
+
 # Dataset
 Our strategy for drinking prediction modeling is as follows: using behavioral features from sensor data over a given analysis window of _w_ hours (where we varied _w_), we predicted whether the subject will have a binge drinking event within _d_ hours (with varying _d_ to optimize the model). We use behavioral features from sensor data over a given analysis window of _w_ hours, we predict whether the subject will have a binge drinking event within _d_ hours . To build this predictive model, we first created a dataset containing the sensor data for each person on each day of the study, calculating features in 15-minute windows. In the dataset folder, we have created 15 datasets by combining different windows and distances. The corresponding windows and diatances according to the name of the [dataset folder](/dataset/), such as the '15_result_indexed_dataset_window1_distance1.csv' file, window1 means its window is 1 and distance1 means its distance is 1. In total we have phone sensor data from 75 young adults.
 
