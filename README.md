@@ -9,7 +9,7 @@ Our strategy for drinking prediction modeling is as follows: using behavioral fe
 
 ![image](/figs/datasetCreation.png)
 
-<!-- # Preprocessing, Modeling and Explanation -->
+# Preprocessing, Modeling and Explanation
 
 ## Feature Extraction
 We followed robust feature exctraction method decribed in [Extraction of Behavioral Features from Smartphone and Wearable Data](
@@ -17,9 +17,11 @@ https://doi.org/10.48550/arXiv.1812.10394). Additionaly we extarct [Latitude and
 
 <!-- ## Machine Learning
 
-## Model Explainbility
+## Model Explainbility -->
 
-# Tutorial -->
+![image](/figs/ml_xai.png)
+
+<!-- # Tutorial --> 
 
 ## Setup
 
