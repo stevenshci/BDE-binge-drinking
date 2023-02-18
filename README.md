@@ -78,3 +78,9 @@ model = XGBClassifier(**params)
 When we get the model, we use XAI to analysis it. For XAI analysis, we use two packages: pdpbox and shap.
 
 For details see: https://github.com/slundberg/shap and https://github.com/SauceCat/PDPbox
+If pdpbox install unsuccessful. Please use code:
+```
+git clone https://github.com/SauceCat/PDPbox.git
+cd PDPbox
+python setup.py install
+```
