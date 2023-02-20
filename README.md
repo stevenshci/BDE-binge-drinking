@@ -87,4 +87,17 @@ python setup.py install
 
 ### PDPBOX
 
+```
+pdp_dist = pdp.pdp_isolate(model=model, dataset=X_test_general, model_features=X_test_general.columns, feature='radius_of_gyration', num_grid_points=11)
+```
+
+
 ### SHAP
+
+```
+print(shap.summary_plot(shap_values[2], X_test_general, max_display=20))
+```
+
+```
+print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
+```
