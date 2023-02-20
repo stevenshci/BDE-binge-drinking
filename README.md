@@ -74,7 +74,7 @@ Using the best model parameters obtained in the second step, a new model is gene
 model = XGBClassifier(**params)
 ```
 
-### XAI analysis
+## XAI analysis
 When we get the model, we use XAI to analysis it. For XAI analysis, we use two packages: pdpbox and shap.
 
 For details see: https://github.com/slundberg/shap and https://github.com/SauceCat/PDPbox
@@ -84,3 +84,7 @@ git clone https://github.com/SauceCat/PDPbox.git
 cd PDPbox
 python setup.py install
 ```
+
+### PDPBOX
+
+### SHAP
