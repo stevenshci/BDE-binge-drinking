@@ -40,9 +40,9 @@ Here is an example of using anaconda or miniconda for environment setup:
 For mac user:
 
 ```
-cd code
-conda create -n bde python=3.8
+conda create -n bde python=3.7.16
 conda activate bde
+cd ...file directory\BDE-binge-drinking-main\BDE-binge-drinking-main
 pip install -r requirements.txt
 ```
 
@@ -55,6 +55,7 @@ $ python setup.py install
 ### Running Code
 ```
 conda activate bde
+cd code
 python Weekday_20%_optuna.py
 python Weekend_20%_optuna.py
 ```
