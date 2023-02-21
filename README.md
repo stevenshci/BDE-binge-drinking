@@ -56,7 +56,7 @@ $ python setup.py install
 Change the directory of the dataset file in the code, or put the dataset file in the same directory as the code file.
 ```
 conda activate bde
-cd code
+cd ...file directory\BDE-binge-drinking-main\BDE-binge-drinking-main\code
 python Weekday_20%_optuna.py
 python Weekend_20%_optuna.py
 ```
