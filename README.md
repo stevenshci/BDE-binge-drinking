@@ -40,6 +40,7 @@ Here is an example of using anaconda or miniconda for environment setup:
 For mac user:
 
 ```
+cd code
 conda create -n bde python=3.8
 conda activate bde
 pip install -r requirements.txt
