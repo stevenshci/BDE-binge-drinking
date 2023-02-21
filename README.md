@@ -44,8 +44,13 @@ pip install -r requirements.txt
 ```
 
 If pdpbox install unsuccessful. Please use code:
+
+Clone the entire pdpbox project:
 ```
 git clone https://github.com/SauceCat/PDPbox.git
+```
+Use the command line to jump to the directory where the pdpbox folder is located, and use python to run the setup.py file in the pdpbox folder
+```
 cd PDPbox
 python setup.py install
 ```
