@@ -53,6 +53,7 @@ $ cd PDPbox
 $ python setup.py install
 ```
 ### Running Code
+Change the directory of the dataset file in the code, or put the dataset file in the same directory as the code file.
 ```
 conda activate bde
 cd code
