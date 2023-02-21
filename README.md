@@ -37,7 +37,6 @@ https://doi.org/10.48550/arXiv.1812.10394). Additionaly we extarct [Latitude and
 
 Here is an example of using anaconda or miniconda for environment setup:
 
-For mac user:
 
 ```
 conda create -n bde python=3.7.16
