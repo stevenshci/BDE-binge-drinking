@@ -109,6 +109,7 @@ pdp_dist = pdp.pdp_isolate(model=model, dataset=X_test_general, model_features=X
 
 ### SHAP
 For SHAP, we used its analysis of the feature importance and Beeswarm Summary of the model.
+For quicker results, you can select a smaller subsection of the dataset to plot (i.e. X_test_general[:100]).
 
 The Beeswarm Summary code is:
 ```
