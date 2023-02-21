@@ -58,6 +58,12 @@ $ git clone https://github.com/SauceCat/PDPbox.git
 $ cd PDPbox
 $ python setup.py install
 ```
+### Running Code
+```
+conda activate bde
+python Weekday_20%_optuna.py.py
+python Weekend_20%_optuna.py.py
+```
 
 ## Code Breakdown
 For the analysis of the data, the code can be understood as three parts
