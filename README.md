@@ -45,8 +45,8 @@ conda activate bde
 pip install -r requirements.txt
 ```
 
-For windows user:\n
-Please ensure that you are using python 3.8 environment.\n
+For windows user:  
+Please ensure that you are using python 3.8 environment.  
 Please make sure to change the path of requirement.txt during installation.
 ```
 pip install -r e:\\requirements.txt
