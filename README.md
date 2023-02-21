@@ -99,7 +99,7 @@ The Beeswarm Summary code is:
 ```
 print(shap.summary_plot(shap_values[2], X_test_general, max_display=20))
 ```
-The code for Feature Importance is
+The code for Feature Importance is:
 ```
 print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
 ```
