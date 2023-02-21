@@ -86,18 +86,20 @@ python setup.py install
 ```
 
 ### PDPBOX
-
+We mainly use pdpbox to analyze PDP Contour, whose main code is shown below:
 ```
 pdp_dist = pdp.pdp_isolate(model=model, dataset=X_test_general, model_features=X_test_general.columns, feature='radius_of_gyration', num_grid_points=11)
 ```
 
 
 ### SHAP
+For SHAP, we used its analysis of the feature importance and Beeswarm Summary of the model.
 
+The Beeswarm Summary code is:
 ```
 print(shap.summary_plot(shap_values[2], X_test_general, max_display=20))
 ```
-
+The code for Feature Importance is
 ```
 print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
 ```
