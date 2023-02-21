@@ -45,17 +45,6 @@ conda activate bde
 pip install -r requirements.txt
 ```
 
-For windows user:  
-Please ensure that you are using python 3.8 environment.  
-Please make sure to change the path of requirement.txt during installation.
-<<<<<<< HEAD
-
-=======
-```
-pip install -r e:\\requirements.txt
-```
->>>>>>> e5b9c9ec20d7dcddab2992ca526cbb27e0fe2335
-
 If pdpbox install unsuccessful. Please through git (latest develop version):
 ```
 $ git clone https://github.com/SauceCat/PDPbox.git
