@@ -52,16 +52,11 @@ Please make sure to change the path of requirement.txt during installation.
 pip install -r e:\\requirements.txt
 ```
 
-If pdpbox install unsuccessful. Please use code:
-
-Clone the entire pdpbox project:
+If pdpbox install unsuccessful. Please through git (latest develop version):
 ```
-git clone https://github.com/SauceCat/PDPbox.git
-```
-Use the command line to jump to the directory where the pdpbox folder is located, and use python to run the setup.py file in the pdpbox folder
-```
-cd PDPbox
-python setup.py install
+$ git clone https://github.com/SauceCat/PDPbox.git
+$ cd PDPbox
+$ python setup.py install
 ```
 
 ## Code Breakdown
