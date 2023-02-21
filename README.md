@@ -61,8 +61,8 @@ $ python setup.py install
 ### Running Code
 ```
 conda activate bde
-python Weekday_20%_optuna.py.py
-python Weekend_20%_optuna.py.py
+python Weekday_20%_optuna.py
+python Weekend_20%_optuna.py
 ```
 
 ## Code Breakdown
