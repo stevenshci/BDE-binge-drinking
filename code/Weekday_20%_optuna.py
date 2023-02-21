@@ -200,7 +200,7 @@ def main():
 
     # Data Loading
     print('Data Loading ...')
-    file_name = '15_result_indexed_dataset_window3_distance1.csv'
+    file_name = './dataset/15_result_indexed_dataset_window3_distance1.csv'
     df=pd.read_csv(file_name)
     str_name = file_name.split('.')
     df['WTSD_latitude'].fillna(0, inplace=True)

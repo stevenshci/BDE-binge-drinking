@@ -41,8 +41,12 @@ Here is an example of using anaconda or miniconda for environment setup:
 ```
 conda create -n bde python=3.7.16
 conda activate bde
-cd ...file directory\BDE-binge-drinking-main\BDE-binge-drinking-main
 pip install -r requirements.txt
+```
+
+```
+pip uninstall matplotlib
+pip install matplotlib
 ```
 
 If pdpbox install unsuccessful. Please through git (latest develop version):
@@ -54,10 +58,10 @@ $ python setup.py install
 ### Running Code
 Change the directory of the dataset file in the code, or put the dataset file in the same directory as the code file.
 ```
+# Run this command in the project directory
 conda activate bde
-cd ...file directory\BDE-binge-drinking-main\BDE-binge-drinking-main\code
-python Weekday_20%_optuna.py
-python Weekend_20%_optuna.py
+python code/Weekday_20%_optuna.py
+python code/Weekend_20%_optuna.py
 ```
 
 ## Code Breakdown
