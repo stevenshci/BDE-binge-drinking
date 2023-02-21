@@ -43,6 +43,13 @@ conda activate bde
 pip install -r requirements.txt
 ```
 
+If pdpbox install unsuccessful. Please use code:
+```
+git clone https://github.com/SauceCat/PDPbox.git
+cd PDPbox
+python setup.py install
+```
+
 ## Code Breakdown
 For the analysis of the data, the code can be understood as three parts
 1. Data loading
@@ -78,12 +85,6 @@ model = XGBClassifier(**params)
 When we get the model, we use XAI to analysis it. For XAI analysis, we use two packages: pdpbox and shap.
 
 For details see: https://github.com/slundberg/shap and https://github.com/SauceCat/PDPbox
-If pdpbox install unsuccessful. Please use code:
-```
-git clone https://github.com/SauceCat/PDPbox.git
-cd PDPbox
-python setup.py install
-```
 
 ### PDPBOX
 We mainly use pdpbox to analyze PDP Contour, whose main code is shown below:
