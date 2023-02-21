@@ -37,10 +37,30 @@ https://doi.org/10.48550/arXiv.1812.10394). Additionaly we extarct [Latitude and
 
 Here is an example of using anaconda or miniconda for environment setup:
 
+For mac user:
+
 ```
 conda create -n bde python=3.8
 conda activate bde
 pip install -r requirements.txt
+```
+
+For windows user:  
+Please ensure that you are using python 3.8 environment.  
+Please make sure to change the path of requirement.txt during installation.
+
+
+If pdpbox install unsuccessful. Please through git (latest develop version):
+```
+$ git clone https://github.com/SauceCat/PDPbox.git
+$ cd PDPbox
+$ python setup.py install
+```
+### Running Code
+```
+conda activate bde
+python Weekday_20%_optuna.py
+python Weekend_20%_optuna.py
 ```
 
 ## Code Breakdown
@@ -74,13 +94,26 @@ Using the best model parameters obtained in the second step, a new model is gene
 model = XGBClassifier(**params)
 ```
 
-### XAI analysis
+## XAI analysis
 When we get the model, we use XAI to analysis it. For XAI analysis, we use two packages: pdpbox and shap.
 
 For details see: https://github.com/slundberg/shap and https://github.com/SauceCat/PDPbox
-If pdpbox install unsuccessful. Please use code:
+
+### PDPBOX
+We mainly use pdpbox to analyze PDP Contour, whose main code is shown below:
 ```
-git clone https://github.com/SauceCat/PDPbox.git
-cd PDPbox
-python setup.py install
+pdp_dist = pdp.pdp_isolate(model=model, dataset=X_test_general, model_features=X_test_general.columns, feature='radius_of_gyration', num_grid_points=11)
+```
+
+
+### SHAP
+For SHAP, we used its analysis of the feature importance and Beeswarm Summary of the model.
+
+The Beeswarm Summary code is:
+```
+print(shap.summary_plot(shap_values[2], X_test_general, max_display=20))
+```
+The code for Feature Importance is:
+```
+print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
 ```

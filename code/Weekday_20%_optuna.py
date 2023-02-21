@@ -187,7 +187,7 @@ def xgboostML(params,lines,X_train_general, X_test_general, y_train_general, y_t
     print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
 
     #SHAP Dependence Plot 
-    print(shap_figure=shap.dependence_plot('radius_of_gyration', shap_values[2], X_test_general, interaction_index='time_of_day'))
+    print(shap.dependence_plot('radius_of_gyration', shap_values[2], X_test_general, interaction_index='time_of_day'))
 
 
 def main():
