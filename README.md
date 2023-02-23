@@ -23,6 +23,12 @@ Our strategy for drinking prediction modeling is as follows: using behavioral fe
 We followed robust feature exctraction method decribed in [Extraction of Behavioral Features from Smartphone and Wearable Data](
 https://doi.org/10.48550/arXiv.1812.10394). Additionaly we extarct [Latitude and Longitude](/code/Latitude%20and%20longitude%20extraction.py).
 
+
+ ### More Readings
+ [Detecting Drinking Episodes in Young Adults Using Smartphone-based Sensors](https://dl.acm.org/doi/pdf/10.1145/3090051)
+ 
+ [Mobile phone sensors and supervised machine learning to identify alcohol use events in young adults: Implications for just-in-time adaptive interventions](https://www.sciencedirect.com/science/article/abs/pii/S030646031730446X)
+ 
 <!-- ## Machine Learning
 
 ## Model Explainbility -->
