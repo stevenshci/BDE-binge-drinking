@@ -136,7 +136,7 @@ print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_typ
 
 # Additional References 
 
-Bae, Sangwon, Tammy Chung, Denzil Ferreira, Anind K. Dey, and Brian Suffoletto. "Mobile phone sensors and supervised machine learning to identify alcohol use events in young adults: Implications for just-in-time adaptive interventions." Addictive behaviors 83 (2018): 42-47.
+Sangwon Bae, Tammy Chung, Denzil Ferreira, Anind K. Dey, and Brian Suffoletto. "Mobile phone sensors and supervised machine learning to identify alcohol use events in young adults: Implications for just-in-time adaptive interventions." Addictive behaviors 83 (2018): 42-47.
 
 
 Sangwon Bae, Denzil Ferreira, Brian Suffoletto, Juan C. Puyana, Ryan Kurtz, Tammy Chung, and Anind K. Dey. 2017. Detecting Drinking Episodes in Young Adults Using Smartphone-based Sensors. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 1, 2, Article 5 (June 2017), 36 pages. https://doi.org/10.1145/3090051
