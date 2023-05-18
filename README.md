@@ -2,11 +2,13 @@
 
 ## Citation
 
+```
 Bae S, Suffoletto B, Zhang T, Chung T, Ozolcer M, Islam M, Dey A
 Leveraging Mobile Phone Sensors, Machine Learning, and Explainable Artificial Intelligence to Predict Imminent Same-Day Binge-drinking Events to Support Just-in-time Adaptive Interventions: Algorithm Development and Validation Study
 JMIR Form Res 2023;7:e39862
 URL: https://formative.jmir.org/2023/1/e39862
 DOI: 10.2196/39862
+```
 
 ## About
 
@@ -131,3 +133,10 @@ The code for Feature Importance is:
 ```
 print(shap.summary_plot(shap_values[2], X_test_general, max_display=20, plot_type='bar'))
 ```
+
+# Additional References 
+
+Bae, Sangwon, Tammy Chung, Denzil Ferreira, Anind K. Dey, and Brian Suffoletto. "Mobile phone sensors and supervised machine learning to identify alcohol use events in young adults: Implications for just-in-time adaptive interventions." Addictive behaviors 83 (2018): 42-47.
+
+
+Sangwon Bae, Denzil Ferreira, Brian Suffoletto, Juan C. Puyana, Ryan Kurtz, Tammy Chung, and Anind K. Dey. 2017. Detecting Drinking Episodes in Young Adults Using Smartphone-based Sensors. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 1, 2, Article 5 (June 2017), 36 pages. https://doi.org/10.1145/3090051
